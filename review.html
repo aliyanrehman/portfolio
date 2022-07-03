@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+ <!-- ALL GOOGLE FONTS -->
+ <link
+ href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Montserrat:300,400,500,600,700,800,900|Dancing+Script:400,700&subset=latin-ext"
+ rel="stylesheet">
+<!-- FONT AWESOME CSS -->
+<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+<title>Reviews</title>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyDJZOWhTZBnnEbWZBBnFIo3wwlH5hkK-Xc",
+    authDomain: "wahbhi-673fe.firebaseapp.com",
+    databaseURL: "https://wahbhi-673fe-default-rtdb.firebaseio.com",
+    projectId: "wahbhi-673fe",
+    storageBucket: "wahbhi-673fe.appspot.com",
+    messagingSenderId: "1042378509767",
+    appId: "1:1042378509767:web:3ff947122a9d3f2a1cdde2"
+    };
+    firebase.initializeApp(firebaseConfig);
+    var app = firebase.database().ref("testmonials");
+    </script>
+    <script>
+    var azan= firebase.database().ref("testmonials");
+    azan.on('value', function(snapshot){
+     snapshot.forEach(function(elemment){
+        let fname = elemment.val().fname;
+        let lname = elemment.val().lname;
+        let message = elemment.val().messgae;
+      document.getElementById('des').innerHTML += `
+      <div class="col-6 p-5">
+                <div class="card text-center">
+                    <div class="card-body">
+                      <h5 class="card-title">${fname}</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">${lname}</h6>
+                      <p class="card-text">${message}</p>
+                    </div>
+                  </div>
+            </div>
+      
+      
+      `
+     });
+    });
+    </script>
+    
+</head>
+<body>
+
+    <section id="testimonial" class="testimonial-area section-padding" >
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>Reviews!</h2>
+                    </div>
+                </div>
+            </div>
+        <div class="row" id="des">
+            <!-- <div class="col-6 p-5">
+                <div class="card text-center">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div> -->
+          
+
+        </div>
+        </div>
+    </section>
+<!-- START FOOTER DESIGN AREA -->
+<footer class="footer-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                <center>
+                    <h3>Contact Me!</h3>
+                </center>
+                <div class="social-links">
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100009189138468" target="blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send/?phone=923360389946&text&app_absent=0" target="blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="mailto:aliyan.rehman1@gmail.com" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.instagram.com/_aliyannrehman/" target="blank"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <p>&copy;Copyright 2021 | All RightReserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / END FOOTER DESIGN AREA -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

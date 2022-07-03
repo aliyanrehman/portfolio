@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Portfolio Template">
+    <meta name="keywords"
+        content="creative personal, resume, cv, portfolio, personal, developer, Monster,personal resume, onepage, clean, modern">
+    <meta name="author" content="Tanvir Rahman Hridoy">
+    <!-- PAGE TITLE -->
+    <title>Muhammad Aliyan Rehman</title>
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- ALL GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Montserrat:300,400,500,600,700,800,900|Dancing+Script:400,700&subset=latin-ext"
+        rel="stylesheet">
+    <!-- FONT AWESOME CSS -->
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <!-- OWL CAROSEL CSS -->
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
+    <!-- MAGNIFIC CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/effects.css">
+    <link rel="stylesheet" href="assets/css/YTPlayer.css">
+    <!-- MAIN STYLE CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- RESPONSIVE CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope, $http) {
+            $http.get("https://wahbhi-673fe-default-rtdb.firebaseio.com/testmonials/.json")
+                .then(function (response) {
+                    $scope.myWelcome = response.data;
+                });
+        });
+
+    </script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDJZOWhTZBnnEbWZBBnFIo3wwlH5hkK-Xc",
+            authDomain: "wahbhi-673fe.firebaseapp.com",
+            databaseURL: "https://wahbhi-673fe-default-rtdb.firebaseio.com",
+            projectId: "wahbhi-673fe",
+            storageBucket: "wahbhi-673fe.appspot.com",
+            messagingSenderId: "1042378509767",
+            appId: "1:1042378509767:web:3ff947122a9d3f2a1cdde2"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var app = firebase.database().ref("testmonials");
+
+    </script>
+
+
+
+</head>
+
+<body ng-controller="myCtrl">
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="status">
+            <div class="status-mes"></div>
+        </div>
+    </div>
+    <!-- / END PRELOADER -->
+
+    <!-- START HOMEPAGE DESIGN AREA -->
+    <header id="home" class="welcome-area">
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!-- START LOGO DESIGN AREA -->
+                        <div class="logo">
+                            <a href="index.html">Aliyan</a>
+                        </div>
+                        <!-- END LOGO DESIGN AREA -->
+                    </div>
+                    <div class="col-sm-9">
+                        <!-- START MENU DESIGN AREA -->
+                        <div class="mainmenu">
+                            <div class="navbar navbar-nobg">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target=".navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a class="smoth-scroll" href="#home">Home <div
+                                                    class="ripple-wrapper"></div></a>
+                                        </li>
+                                        <li><a class="smoth-scroll" href="#about">About</a>
+                                        </li>
+                                        <li><a class="smoth-scroll" href="#service">service</a>
+                                        </li>
+                                        <li><a class="smoth-scroll" href="#work">Work</a>
+                                        </li>
+                                        <li><a href="../review.html" target="blank">Reviews</a>
+                                        </li>
+                                        <li><a class="smoth-scroll" href="#contact">Feedback</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-image-area" data-stellar-background-ratio="0.6">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="header-text text-center">
+                                    <h1 class="typewrite" data-period="2000"
+                                        data-type='[ "Hi, I am Aliyan.", "I am Designer.", "I am Editor.", "i am from PK" ]'>
+                                        <span class="wrap"></span>
+                                    </h1>
+                                    <div class="social-links header-links">
+                                        <ul>
+                                            <li><a href="https://www.facebook.com/profile.php?id=100009189138468"
+                                                    target="blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="https://api.whatsapp.com/send/?phone=923360389946&text&app_absent=0"
+                                                    target="blank"><i class="fa fa-whatsapp"></i></a></li>
+                                            <li><a href="mailto:aliyan.rehman1@gmail.com" target="blank"><i
+                                                        class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="https://www.instagram.com/_aliyannrehman/" target="blank"><i
+                                                        class="fa fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="home-arrow-down">
+                                        <a href="#about" class="smoth-scroll btn"><i
+                                                class="fa fa-angle-double-down"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- / END HOMEPAGE DESIGN AREA -->
+
+
+    <!-- START ABOUT DESIGN AREA -->
+    <section id="about" class="about-me-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>about Aliyan</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- START ABOUT IMAGE AREA -->
+                    <div class="about-image">
+                        <img src="assets/images/me.jpg" alt="">
+                    </div>
+                    <!-- / END ABOUT IMAGE AREA -->
+                </div>
+                <div class="col-md-8">
+                    <!-- START ABOUT TEXT AREA -->
+                    <div class="about-text">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.4s">I'm 21 years old Designer and focused on brand
+                            identity!</h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.6s">HI, My name is Aliyan i am a professional graphic
+                            designer with more than 5 years of experience in Photoshop and illustrator social media
+                            designing, My goal is to give you high quality designs for your social media, I am looking
+                            forward to working with you.</p>
+
+                    </div>
+                    <!-- / END ABOUT TEXT AREA -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / END ABOUT DESIGN AREA -->
+
+
+    <!-- START SERVICES DESIGN AREA -->
+    <section id="service" class="service-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>what i offer?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- START SINGLE SERVICE DESIGN AREA -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="single-service wow fadeInUp" data-wow-delay="0.2s">
+                        <i class="fa fa-building"></i>
+                        <h2>Social Media Marketing</h2>
+                        <p>We Create Posts in a way that they not only look CLICKBAIT & CATCHY individually but also
+                            form a Beautiful Sync in your profile, that's what we EXPERTISE in, CONTENT MARKETING via
+                            PROFILE BRANDING.</p>
+                    </div>
+                </div>
+                <!-- / END SINGLE SERVICE DESIGN AREA -->
+                <!-- START SINGLE SERVICE DESIGN AREA -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="single-service wow fadeInUp" data-wow-delay="0.4s">
+                        <i class="fa fa-keyboard-o"></i>
+                        <h2>Picture Editing</h2>
+                        <p>If you are looking for a Modern and Professional Business logo design, then you are at the
+                            right place. We focus on creating simple yet effective designs that elevate your business
+                            outlook and leave an everlasting impression.</p>
+                    </div>
+                </div>
+                <!-- / END SINGLE SERVICE DESIGN AREA -->
+                <!-- START SINGLE SERVICE DESIGN AREA -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="single-service wow fadeInUp" data-wow-delay="0.6s">
+                        <i class="fa fa-paper-plane"></i>
+                        <h2>Video Editing</h2>
+                        <p>If your video needs pretty much any kind of treatment, I can handle it. I can edit it so it
+                            flows smoothly, add sound effects, text effects, royalty free music, just improve the
+                            overall appearance of the footage, anything your footage needs.</p>
+                    </div>
+                </div>
+                <!-- / END SINGLE SERVICE DESIGN AREA -->
+                <!-- START SINGLE SERVICE DESIGN AREA -->
+                <div class="col-md-6 col-sm-6">
+                    <div class="single-service wow fadeInUp" data-wow-delay="0.8s">
+                        <i class="fa fa-deaf"></i>
+                        <h2>24 hour friendly support</h2>
+                        <p>Questions? Our round-the-clock support team is available to help anytime, anywhere.</p>
+                    </div>
+                </div>
+                <!-- / END SINGLE SERVICE DESIGN AREA -->
+            </div>
+        </div>
+    </section>
+    <!-- / END SERVICES DESIGN AREA -->
+
+
+    <!-- START WORK DESIGN AREA -->
+    <section id="work" class="work section-padding">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-title">
+                        <h2>featured works.</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <ul class="work">
+                    <li class="filter" data-filter=".picture">picture editing</li>
+                    <li class="filter" data-filter=".video">Video edoting</li>
+                </ul>
+            </div>
+            <div class="work-inner">
+                <div class="row work-posts grid">
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix picture pt-3">
+                        <div class="item">
+                            <a href="assets/images/work/1.jpg" class="work-popup">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/work/1.jpg" style="width: 500px; height:500px;" alt="image">
+                                    <figcaption>
+                                        <br>
+                                        <h2>View</h2>
+
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix picture pt-3">
+                        <div class="item">
+                            <a href="assets/images/work/2.jpg" class="work-popup">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/work/2.jpg" style="width: 500px; height:500px;" alt="image">
+                                    <figcaption>
+                                        <br>
+                                        <h2>View</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix picture pt-3">
+                        <div class="item">
+                            <a href="assets/images/work/3.jpg" class="work-popup">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/work/3.jpg" style="width: 500px; height:500px;" alt="image">
+                                    <figcaption>
+                                        <br>
+                                        <h2>View</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix picture pt-3">
+                        <div class="item">
+                            <a href="assets/images/work/4.jpg" class="work-popup">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/work/4.jpg" style="width: 500px; height:500px;" alt="image">
+                                    <figcaption>
+                                        <br>
+                                        <h2>View</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix picture pt-3">
+                        <div class="item">
+                            <a href="assets/images/work/5.jpg" class="work-popup">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/work/5.jpg" style="width: 500px; height:500px;" alt="image">
+                                    <figcaption>
+                                        <br>
+                                        <h2>View</h2>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix video pt-3">
+                        <div class="item">
+                            <div class="item" style="width: 500px; height:360px;">
+                                <figure class="effect-ruby">
+                                    <video controls style="width: 100%; height:300px;" loop autoplay>
+                                        <source src="assets/images/work/8.mp4">
+                                    </video>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix video pt-3">
+                        <div class="item">
+                            <figure class="effect-ruby">
+                                <video controls style="width: 500px; height:300px;" loop autoplay>
+                                    <source src="assets/images/work/6.mp4">
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix video pt-3">
+                        <div class="item">
+                            <figure class="effect-ruby">
+                                <video controls style="width: 500px; height:300px;" loop autoplay>
+                                    <source src="assets/images/work/7.mp4">
+                                </video>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / END START WORK DESIGN AREA -->
+    <!-- START CONTACT DESIGN AREA -->
+    <section id="contact" class="contact-me-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h2>Give Feedback!</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form id="contactForm" class="contact-form" action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input id="fname" class="form-control" type="text" name="fname" placeholder="First Name"
+                                    required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input id="lname" class="form-control" type="text" name="lname" placeholder="Last Name"
+                                    required>
+                            </div>
+
+                            <div class="col-md-12 form-group">
+                                <textarea id="message" class="form-control" placeholder="Message" rows="4"
+                                    required></textarea>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn" type="submit" onclick="myclick()">Submit Now</button>
+                            </div>
+                            <div class="col-md-12 text-center" id="action">
+                                <p class="input-success" id="input-success">Your Feedback submiited successfully. Thanks
+                                    for your Concern.!</p>
+                                <p class="input-error" id="input-error">Sorry, Message could not send! Please try again.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / END CONTACT DESIGN AREA -->
+
+    <!-- START FOOTER DESIGN AREA -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                    <center>
+                        <h3>Contact Me!</h3>
+                    </center>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100009189138468" target="blank"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://api.whatsapp.com/send/?phone=923360389946&text&app_absent=0"
+                                    target="blank"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="mailto:aliyan.rehman1@gmail.com" target="blank"><i
+                                        class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.instagram.com/_aliyannrehman/" target="blank"><i
+                                        class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <p>&copy;Copyright 2021 | All RightReserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / END FOOTER DESIGN AREA -->
+
+    <!-- LATEST JQUERY -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- OWL CAROUSEL JS  -->
+    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+    <!-- MIXITUP JS -->
+    <script src="assets/js/jquery.mixitup.js"></script>
+    <!-- PARALLAX JS -->
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <!-- MAGNIFICANT JS -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- CONTACT FORM JS -->
+    <script src="assets/js/form-contact.js"></script>
+    <!-- SCRIPT JS -->
+    <script src="assets/js/scripts.js"></script>
+    <script>
+
+
+        function myclick() {
+
+
+            var fname = document.getElementById('fname');
+            var lname = document.getElementById('lname');
+            var message = document.getElementById('message');
+            if (fname.value != "" && lname.value != "" && message.value != "") {
+                var obj = {
+                    fname: fname.value,
+                    lname: lname.value,
+                    messgae: message.value,
+                };
+
+                app.push(obj);
+                clr();
+                success();
+            }
+            else {
+                fail();
+            }
+
+        }
+        function clr() {
+            document.getElementById('lname').value = "";
+            document.getElementById('fname').value = "";
+            document.getElementById('message').value = "";
+        }
+        function success() {
+            document.getElementById("input-success").style.display = "block";
+        }
+        function fail() {
+            document.getElementById("input-error").style.display = "block";
+        }      </script>
+
+</body>
+
+</html>
